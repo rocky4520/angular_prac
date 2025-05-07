@@ -1,0 +1,33 @@
+<h1 style="text-align: center;padding-bottom: 20px;">reactive-form works!</h1>
+
+
+<!-- <label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+
+<button (click)="updateName()">Update Name</button> -->
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form-control">
+    <label for="firstName">First Name: </label>
+    <input id="firstName" type="text" formControlName="firstName">
+    <br>
+    <br>
+    <label for="lastName">Last Name: </label>
+    <input id="lastName" type="text" formControlName="lastName">
+    <br><br>
+
+    <div formGroupName="address" >
+        <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street" />
+        <br><br>
+        <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city" />
+        <br><br>
+        <label for="state">State: </label>
+        <input id="state" type="text" formControlName="state" />
+        <br><br>
+        <label for="zip">Zip Code: </label>
+        <input id="zip" type="text" formControlName="zip" />
+    </div>
+    <br>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button type="button" (click)="updateProfile()">Update Profile Value</button>
+</form>

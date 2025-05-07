@@ -1,0 +1,55 @@
+<button class="btn btn-success" (click)="navigatetoAdmin()">Go to Admin</button>
+<div class="row">
+    <div class="col-6">
+        1. Interpolation
+
+        <p>firstName => {{firstName}}</p>
+
+        <div>
+            {{rollNo}}
+        </div>
+        <span>{{isActive}}</span>
+    </div>
+
+    
+    <div class="col-6">
+        2. Property Binding <br><br>
+        <input type="text" [value]="firstName" name="">
+        <br>
+        <input type="text" [placeholder]="myPlaceholder">
+        <br>
+        <div [class]="div1ClassName" style="height: 100px; width: 100px;">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            3. Event Binding <br><br>
+            <button class="btn btn-success" (click)="showWelcomeMessage()">Show welcome Text</button>
+        </div>
+        <div class="col-3">
+            <select (change)="onCityChange()">
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Panji">Panji</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName">
+    </div>
+
+    <div class="col-3">
+        <select [(ngModel)]="selectedCity">
+            <option value="Pune">Pune</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Panji">Panji</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+        - {{selectedCity}}
+    </div>
+</div>

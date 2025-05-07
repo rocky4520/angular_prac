@@ -1,0 +1,36 @@
+<div class="App">
+    <form #contactForm="ngForm" (submit)="handleSubmit(contactForm.value)">
+        <p>
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" ngModel #fname="ngModel" required>
+        </p>
+        <p>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" ngModel required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" ngModel required>
+        </p>
+        <p>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="male" ngModel> Male
+            <input type="radio" name="gender" value="female" ngModel> Female
+        </p>
+        <p>
+            <label for="isMarried">Married</label>
+            <input type="checkbox" name="isMarried" ngModel>
+        </p>
+        <p>
+            <label for="firstname">Country</label>
+            <select name="country" ngModel required>
+                @for (country of countryList; track $index) {
+                    <option>{{country}}</option>
+                }
+            </select>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+</div>
