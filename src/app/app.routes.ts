@@ -15,7 +15,9 @@ import { TdFormComponent } from './components/td-form/td-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { StudentComponent } from './components/student/student.component';
 import { Student1Component } from './components/student/student1/student1.component';
-import { Student2Component } from './components/student/student2/student2.component';
+import { Student2Component } from './components/student/student1/student2/student2.component';
+import { Student3Component } from './components/student/student3/student3.component';
+
 
 export const routes: Routes = [
     {
@@ -75,21 +77,37 @@ export const routes: Routes = [
         path: 'reactive-form',
         component:ReactiveFormComponent
     },
+    // {
+    //     path: 'student',
+    //     component:StudentComponent,
+    //     children: [
+    //         {
+    //             path: 'student1',
+    //             component:Student1Component,
+    //             children: [
+    //                 {
+    //                     path: 'student2',
+    //                     component:Student2Component
+    //                 }
+    //             ]
+    //         },
+    //     ]
+    // },
     {
-        path: 'student',
-        component:StudentComponent,
-        children: [
-            {
-                path: 'student1',
-                component:Student1Component,
-                children: [
-                    {
-                        path: 'student2',
-                        component:Student2Component
-                    }
-                ]
-            },
-        ]
+        path: 'dashBoard/student',
+        component:StudentComponent
+    },
+    {
+        path: 'dashBoard/student/student1',
+        component:Student1Component
+    },
+    {
+        path: 'dashBoard/student/student3',
+        component:Student3Component
+    },
+    {
+        path: 'dashBoard/student/student1/student2',
+        component:Student2Component
     },
     {
         path: '**',

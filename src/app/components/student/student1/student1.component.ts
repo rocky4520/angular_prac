@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Student2Component } from "../student2/student2.component";
+
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
